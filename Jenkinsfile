@@ -32,7 +32,7 @@ pipeline {
             sh '''
                mvn sonar:sonar \
                -Dsonar.host.url=http://15.207.71.237:9000 \
-               -DSonar.token=$SONAR-TOKEN
+               -Dsonar.token=$SONAR-TOKEN
               '''
             }
           }
