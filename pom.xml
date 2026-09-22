@@ -30,7 +30,7 @@
           <snapshotRepository>
                <id>Maven-snapshorts-1</id>
 	       <name>Maven-snapshort</name>
-               <url>http://13.201.223.165:8081/repository/Maven-snapshort-1</url>
+               <url>http://13.201.223.165:8081/repository/Maven-snapshorts-1</url>
           </snapshotRepository>
 
       </distributionManagement>     
