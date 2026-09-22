@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>mini-maven-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        
+        <sonar.host.url>http://15.207.71.237:9000</sonar.host.url>
+    </properties>
+  
+    <!-- Nexus Configuration -->
+      <distributionManagement>
+
+          <repository>
+              <id>Maven-Releases-1</id>
+   	      <name>Maven-Release</name>
+ 	      <url>http://13.201.223.165:8081/repository/Maven-Releases-1</url>
+          </repository>
+
+          <snapshotRepository>
+               <id>Maven-snapshorts-1</id>
+	       <name>Maven-snapshort</name>
+               <url>http://13.201.223.165:8081/repository/Maven-snapshort-1</url>
+          </snapshotRepository>
+
+      </distributionManagement>     
+
+    <dependencies>
+
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
+
+            <!-- Surefire Plugin for JUnit 5 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+            </plugin>
+
+            <!-- SonarQube plugib -->
+            <plugin>
+                 <groupId>org.sonarsource.scanner.maven</groupId>
+                 <artifactId>sonar-maven-plugin</artifactId>
+                 <version>5.1.0.475</version>
+            </plugin>
+            
+
+        </plugins>
+    </build>
+
+</project>
