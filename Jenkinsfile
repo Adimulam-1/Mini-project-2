@@ -28,11 +28,11 @@ pipeline {
   
       stage ('SonarQube Analysis') {
         steps {
-           withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR-TOKEN')]) {
+           withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
             sh '''
                mvn sonar:sonar \
                -Dsonar.host.url=http://15.207.71.237:9000 \
-               -Dsonar.token=$SONAR-TOKEN
+               -Dsonar.token=$SONAR_TOKEN
               '''
             }
           }
