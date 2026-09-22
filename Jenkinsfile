@@ -37,5 +37,10 @@ pipeline {
             }
           }
        }
+       stage ('Deplot to nexus') {
+         steps {
+            sh 'mvn deploy -s settings.xml'
      }
    }
+ }
+}
