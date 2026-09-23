@@ -15,7 +15,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         
-        <sonar.host.url>http://15.207.71.237:9000</sonar.host.url>
+        <sonar.host.url>http://65.0.125.201:9000</sonar.host.url>
     </properties>
   
     <!-- Nexus Configuration -->
@@ -24,13 +24,13 @@
           <repository>
               <id>Maven-Releases-1</id>
    	      <name>Maven-Release</name>
- 	      <url>http://13.201.223.165:8081/repository/Maven-Releases-1</url>
+ 	      <url>http://15.252.240.49:8081/repository/Maven-Releases-1</url>
           </repository>
 
           <snapshotRepository>
                <id>Maven-snapshorts-1</id>
 	       <name>Maven-snapshort</name>
-               <url>http://13.201.223.165:8081/repository/Maven-snapshorts-1</url>
+               <url>http://15.252.240.49:8081/repository/Maven-snapshorts-1</url>
           </snapshotRepository>
 
       </distributionManagement>     
