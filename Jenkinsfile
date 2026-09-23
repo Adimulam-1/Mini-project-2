@@ -31,7 +31,7 @@ pipeline {
            withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
             sh '''
                mvn sonar:sonar \
-               -Dsonar.host.url=http://15.207.71.237:9000 \
+               -Dsonar.host.url=http://65.0.125.201:9000 \
                -Dsonar.token=$SONAR_TOKEN
               '''
             }
